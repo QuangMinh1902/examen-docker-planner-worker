@@ -1,5 +1,5 @@
-# Utiliser une image Node.js LTS comme base
-FROM node:lts
+FROM node:21-alpine3.17
+
 
 RUN mkdir -p /home/app
 

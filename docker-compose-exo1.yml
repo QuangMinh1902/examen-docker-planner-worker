@@ -1,0 +1,21 @@
+version: '3'
+services:
+  planner:
+    build:
+      context : .
+      dockerfile : ./dockerfiles/planner.dockerfile
+    ports: 
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      TASKS: 4
+
+  worker:
+    build: 
+      context : .
+      dockerfile : ./dockerfiles/worker.dockerfile
+    ports : 
+      - "8080:8080"
+    environment:
+      PORT: 8080
+      PLANNER: 'http://planner:3000'
