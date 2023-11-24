@@ -1,2 +1,6 @@
-# Exemple d'utilisation de curl pour enregistrer un worker dynamique
-curl -X POST localhost:3000/register-dynamic -H "Content-Type: application/json" -d "{\"url\": \"http://localhost:8082\"}"
+#!/bin/bash
+
+for var in "$@"
+do
+    curl -X POST localhost:3000/register  -H "Content-Type: application/json"  -d "{\"url\": \"http://localhost:$var\"}"
+done
