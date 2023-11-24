@@ -5,3 +5,9 @@
 ```
     bash exo1.sh
 ```
+
+## L'exo2 : 
+
+```
+    bash exo2.sh
+```

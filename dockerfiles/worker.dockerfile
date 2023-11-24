@@ -13,6 +13,8 @@ COPY ./worker/main.js .
 
 # Installer les dépendances
 RUN npm install
+RUN npm install uuid
+
 
 # Commande pour démarrer l'application
 CMD ["node", "main.js"]
