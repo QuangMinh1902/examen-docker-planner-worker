@@ -36,6 +36,13 @@ app.post('/register', (req, res) => {
   res.send('ok')
 })
 
+app.post('/register-dynamic', (req, res) => {
+  const { url, id } = req.body;
+  console.log(`Register: adding dynamic worker ${url} worker: ${id}`);
+  workers.push({ url, id });
+  res.send('ok');
+});
+
 let tasks = generateTasks(nbTasks)
 let taskToDo = nbTasks
 
