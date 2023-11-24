@@ -13,3 +13,10 @@
     cd exo2
     bash exo2.sh
 ```
+
+## L'exo3 : 
+
+```
+    cd exo3
+    bash exo3.sh
+```
