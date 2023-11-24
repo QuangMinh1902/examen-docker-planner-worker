@@ -17,7 +17,8 @@
 ### work well
 
 ## L'exo3 : 
-![Alt text](image-1.png)
+![image](https://github.com/QuangMinh1902/examen-docker-planner-worker/assets/59959039/e0307bbb-6cf6-4f17-a9f2-5c3548c37666)
+
 * worker fait seulement le ADD et worker1 fait seulement le MULT
 
 ```
