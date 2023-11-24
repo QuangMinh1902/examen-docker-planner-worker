@@ -17,6 +17,8 @@
 ### work well
 
 ## L'exo3 : 
+![Alt text](image-1.png)
+* worker fait seulement le ADD et worker1 fait seulement le MULT
 
 ```
     cd exo3
