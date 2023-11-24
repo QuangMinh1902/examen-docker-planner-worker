@@ -18,8 +18,7 @@ services:
     ports : 
       - "8080:8080"
     environment:
-      # PORT: 8080
-      MULT: true
+      MULT: false
       ADD: true
       PLANNER: 'http://planner:3000'
 
@@ -33,5 +32,5 @@ services:
     environment:
       PORT: 8070
       MULT: true
-      ADD: true
+      ADD: false  # Spécialisé dans la multiplication uniquement
       PLANNER: 'http://planner:3000'

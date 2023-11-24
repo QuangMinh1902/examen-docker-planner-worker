@@ -8,9 +8,11 @@ const PLANNER =
   process.env.PLANNER !== undefined
     ? process.env.PLANNER
     : "http://localhost:3000";
+
 const MULT =
   process.env.MULT !== undefined ? JSON.parse(process.env.MULT) : true;
 const ADD = process.env.ADD !== undefined ? JSON.parse(process.env.ADD) : true;
+
 const app = express();
 const port = process.env.PORT || 8080;
 const ADDRESS =
@@ -37,7 +39,7 @@ app.use(
   })
 );
 
-if (MULT)
+if (MULT) {
   app.post("/mult", (req, res) => {
     if (mult) {
       console.error("mult", "Already working");
@@ -54,8 +56,9 @@ if (MULT)
       res.send(JSON.stringify({ res: a * b, duration, id }));
     }, duration);
   });
+}
 
-if (ADD)
+if (ADD) {
   app.post("/add", (req, res) => {
     if (add) {
       console.error("add", "Already working");
@@ -72,6 +75,7 @@ if (ADD)
       res.send(JSON.stringify({ res: a + b, duration, id }));
     }, duration);
   });
+}
 
 app.get("/", (req, res) => {
   if (mult) {
